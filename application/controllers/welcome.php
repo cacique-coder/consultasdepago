@@ -1,15 +1,19 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
-	private = $current_user;
+	private $current_user;
+
 	function __construct() {
-		$this -> load -> model('Reporte_model')
-		$this -> load -> model('User_model')
+		parent::__construct();
+		$this->load->model('Reporte_model');
+		$this->load->model('User_model');
 //		$current_user = User_model::load($this->session->all_userdata())
-		$current_user = new User_model();
+		$this -> current_user = new User_model();
 	}
 	public function index(){
-		$this->load->view('index',array('reporte' => ));
+		$reporte = new Reporte_model($this->current_user);
+		print_r($reporte->generarComprobante());
+#		$this->load->view('index',array('reporte' => ));
 	}
 }
 
