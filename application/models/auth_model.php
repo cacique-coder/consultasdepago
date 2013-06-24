@@ -1,7 +1,7 @@
 <?php
 class Auth_model extends CI_Model {
   private $user;
-  private $ldapconn;
+  private $ldap_conn;
   private $ldap_rdn;
   private $ldap_pass;
 
@@ -37,22 +37,22 @@ class Auth_model extends CI_Model {
   }
 
   private function search_data(){
-    $result = ldap_search($this->ldapconn,$config['ldap']['tree'], "(cn=*)") or die ("Error in search query: ".ldap_error($ldapconn));
-    $data = ldap_get_entries($ldapconn, $result);
+    $result = ldap_search($this->ldap_conn,$config['ldap']['tree'], "(cn=*)") or die ("Error in search query: ".ldap_error($ldap_conn));
+    $data = ldap_get_entries($ldap_conn, $result);
     var_dump($data);
   // Falta programar esto... depende de lo que traiga la informacion
   // y no tengo ni idea
   }
 
   private function connect_ldap(){
-    $this->ldapconn = ldap_connect($config['ldap']['host']) or die("Could not connect to LDAP server.");
+    $this->ldap_conn = ldap_connect($config['ldap']['host']) or die("Could not connect to LDAP server.");
   }
   private function user_data(){
     $this->ldap_rdn  = $this->user->login;     // ldap rdn or dn
     $this->ldap_pass = $this->user->password;  // associated password    
   }
   private function ldap_bind(){
-  $this->ldapbind = ldap_bind($this->ldapconn, $this->ldap_rdn, $this->ldap_pass);
+  $this->ldapbind = ldap_bind($this->ldap_conn, $this->ldap_rdn, $this->ldap_pass);
   }
   private function set_auth_user(){
     $this->user->set_auth();
