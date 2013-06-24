@@ -21,3 +21,7 @@ label input{
 	font-size: 1.2em;
 	font-weight: bold;
 }
+
+.big_label label{
+	width: 260px;
+}

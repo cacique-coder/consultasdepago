@@ -7,13 +7,20 @@ class Welcome extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Reporte_model');
 		$this->load->model('User_model');
-//		$current_user = User_model::load($this->session->all_userdata())
-		$this -> current_user = new User_model();
+		$this-> set_current_user();
 	}
 	public function index(){
-		$reporte = new Reporte_model($this->current_user);
-		print_r($reporte->generarComprobante());
-#		$this->load->view('index',array('reporte' => ));
+		if($this->current_user)
+			redirect('reporte/formulario');
+		else 
+			redirect('auth');
+	}
+	private function set_current_user(){
+		$data_user = $this->session->all_userdata();
+		if(isset($data_user['auth'])){
+			$this -> current_user = User_model::load($data_user);
+		else
+			$this -> current_user = false;
 	}
 }
 

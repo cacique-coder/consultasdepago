@@ -7,11 +7,10 @@ class Reportes extends CI_Controller {
 		parent::__construct();
 		$this->load->model('Reporte_model');
 		$this->load->model('User_model');
-		$current_user = User_model::load($this->session->all_userdata())
 		$this->set_current_user();
 	}
 	public function index(){
-		$this->load->view('index',array('user' => $this->current_user));
+		$this->load->view('reporte_formulario',array('user' => $this->current_user));
 	}
 	public function reporte(){
 		$this->load->view('index',array('user' => $this->current_user));
@@ -22,12 +21,13 @@ class Reportes extends CI_Controller {
 	}
 
 	private function set_current_user(){
-		$this->session->sess_destroy();
-		$data_user = $this->session->userdata('user');
-		if($data_user)
-			$this -> current_user = User_model::load($data_user);
+		$data_user = $this->session->all_userdata();
+		if(isset($data_user['auth'])){
+			$this->User_model->load_session($data_user);
+			$this -> current_user = $this->User_model;
+		}
 		else
-			redirect("/");
+			redirect("/");			
 	}
 }
 
