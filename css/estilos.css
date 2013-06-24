@@ -1,0 +1,22 @@
+html{
+	font-family: "Helvetica","Arial","san-serif";
+	font-size: 12px;
+}
+label{
+	position: relative;
+	display:block;
+	width: 100px;
+	margin-bottom: 10px;
+}
+label input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-left:100px;
+	padding: 3px 5px;
+}
+#error{
+	color:#990000;
+	font-size: 1.2em;
+	font-weight: bold;
+}
