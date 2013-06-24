@@ -20,7 +20,7 @@ class Auth_model extends CI_Model {
     $this -> connect_ldap();
     $this -> user_data();
     $this -> ldap_bind();
-  if ($this->ldapbind) {
+    if ($this->ldapbind) {
       $this->search_data();
       $this->set_auth_user();
       return true;
@@ -52,8 +52,9 @@ class Auth_model extends CI_Model {
     $this->ldap_pass = $this->user->password;  // associated password    
   }
   private function ldap_bind(){
-  $this->ldapbind = ldap_bind($this->ldap_conn, $this->ldap_rdn, $this->ldap_pass);
+    $this->ldapbind = ldap_bind($this->ldap_conn, $this->ldap_rdn, $this->ldap_pass);
   }
+
   private function set_auth_user(){
     $this->user->set_auth();
   }
