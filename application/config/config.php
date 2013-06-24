@@ -241,9 +241,6 @@ $config['rewrite_short_tags'] = FALSE;
 */
 $config['proxy_ips'] = '';
 
-$config['ldap']['host'] = 'localhost';
-$config['ldap']['tree'] = 'OU=SBSUsers,OU=Users,OU=MyBusiness,DC=myDomain,DC=local';
-
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */

@@ -5,6 +5,11 @@ class Auth_model extends CI_Model {
   private $ldap_rdn;
   private $ldap_pass;
 
+  private $config = array(
+    'host' => 'localhost',
+    'tree' =>'OU=SBSUsers,OU=Users,OU=MyBusiness,DC=myDomain,DC=local'
+    );
+
   function __construct(User_model $user = null) {
     parent::__construct();
     if ($user != null){
@@ -37,7 +42,7 @@ class Auth_model extends CI_Model {
   }
 
   private function search_data(){
-    $result = ldap_search($this->ldap_conn,$config['ldap']['tree'], "(cn=*)") or die ("Error in search query: ".ldap_error($ldap_conn));
+    $result = ldap_search($this->ldap_conn,$this->config['tree'], "(cn=*)") or die ("Error in search query: ".ldap_error($ldap_conn));
     $data = ldap_get_entries($ldap_conn, $result);
     var_dump($data);
   // Falta programar esto... depende de lo que traiga la informacion
@@ -45,7 +50,7 @@ class Auth_model extends CI_Model {
   }
 
   private function connect_ldap(){
-    $this->ldap_conn = ldap_connect($config['ldap']['host']) or die("Could not connect to LDAP server.");
+    $this->ldap_conn = ldap_connect($this->config['host']) or die("Could not connect to LDAP server.");
   }
   private function user_data(){
     $this->ldap_rdn  = $this->user->login;     // ldap rdn or dn
