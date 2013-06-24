@@ -16,9 +16,10 @@ class auth extends CI_Controller {
 	public function login() {
 		$this->current_user->set_log_params($this->input->post('user'));
 		$auth = new Auth_model($this -> current_user);
-		if(!$auth->always_in()){
+		if($auth->always_in()){
 			$this->session->set_userdata($auth->data_login_user());
-			redirect('reportes');
+			print_r($this->session);
+//			redirect('reportes');
 		}
 		else
 			$this->load->view('login_form',array('error' => 'No se pudo iniciar sesion'));
