@@ -31,8 +31,12 @@ class Auth_model extends CI_Model {
   public function get_user_auth(){
     $this->user;
   }
+  
+  public function data_login_user(){
+    return $this->user->data_session();
+  }
 
-  public function search_data(){
+  private function search_data(){
     $result = ldap_search($this->ldapconn,$config['ldap']['tree'], "(cn=*)") or die ("Error in search query: ".ldap_error($ldapconn));
     $data = ldap_get_entries($ldapconn, $result);
     var_dump($data);
@@ -40,9 +44,6 @@ class Auth_model extends CI_Model {
   // y no tengo ni idea
   }
 
-  public function data_login_user(){
-    return $this->user->data_session();
-  }
   private function connect_ldap(){
     $this->ldapconn = ldap_connect($config['ldap']['host']) or die("Could not connect to LDAP server.");
   }
