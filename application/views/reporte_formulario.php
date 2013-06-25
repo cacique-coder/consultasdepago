@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="latin9">
-  <title> </title>
-  <?php echo link_tag('css/estilos.css'); ?>
-</head>
-<body>
-
+<?php include('head_html.php');?>
 <div id="container">
   <div id="header">
     <h1> Sistema de consulta de recibo de pago</h1>
@@ -14,7 +6,7 @@
   </div>
 
   <div id="body">
-    <?php echo form_open('auth/login',array('class' => 'big_label')); ?>
+    <?php echo form_open('reportes/comprobante',array('class' => 'big_label','method' =>'get')); ?>
       <label> Indique la quincena deseada:
         <select name='quincena'>
           <option value='1'> Primera</option>
@@ -24,9 +16,8 @@
       </label>
       <label>
         Indique el mes:
-        <?php $meses = explode(' ',"Enero Febrero Marzo Abril Mayo Junio Julio Agosto Septiembre Octubre Noviembre Diciembre");
-              $mes_actual = date('n') - 1;
-          ?>
+        <?php $meses = explode(' ',"Enero Febrero Marzo Abril Mayo Junio Julio Agosto Septiembre Octubre Noviembre Diciembre");?>
+        <?php $mes_actual = date('n') - 1; ?>
         <select> 
           <?php foreach($meses as $mes => $nombre) :?>
             <?php if( $mes_actual < $mes):?>

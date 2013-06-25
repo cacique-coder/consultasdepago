@@ -545,3 +545,209 @@ DEBUG - 2013-06-25 08:53:35 --> Model Class Initialized
 DEBUG - 2013-06-25 08:53:35 --> Model Class Initialized
 DEBUG - 2013-06-25 08:53:35 --> Model Class Initialized
 DEBUG - 2013-06-25 08:53:35 --> Model Class Initialized
+DEBUG - 2013-06-25 08:56:47 --> Config Class Initialized
+DEBUG - 2013-06-25 08:56:47 --> Hooks Class Initialized
+DEBUG - 2013-06-25 08:56:47 --> Utf8 Class Initialized
+DEBUG - 2013-06-25 08:56:47 --> UTF-8 Support Disabled
+DEBUG - 2013-06-25 08:56:47 --> URI Class Initialized
+DEBUG - 2013-06-25 08:56:47 --> Router Class Initialized
+DEBUG - 2013-06-25 08:56:47 --> Output Class Initialized
+DEBUG - 2013-06-25 08:56:47 --> Security Class Initialized
+DEBUG - 2013-06-25 08:56:47 --> Input Class Initialized
+DEBUG - 2013-06-25 08:56:47 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-06-25 08:56:47 --> Language Class Initialized
+DEBUG - 2013-06-25 08:56:47 --> Loader Class Initialized
+DEBUG - 2013-06-25 08:56:47 --> Helper loaded: url_helper
+DEBUG - 2013-06-25 08:56:47 --> Helper loaded: html_helper
+DEBUG - 2013-06-25 08:56:47 --> Helper loaded: form_helper
+DEBUG - 2013-06-25 08:56:47 --> Database Driver Class Initialized
+DEBUG - 2013-06-25 08:56:47 --> Controller Class Initialized
+DEBUG - 2013-06-25 08:56:47 --> Model Class Initialized
+DEBUG - 2013-06-25 08:56:47 --> Model Class Initialized
+DEBUG - 2013-06-25 08:56:47 --> Model Class Initialized
+DEBUG - 2013-06-25 08:56:47 --> Model Class Initialized
+DEBUG - 2013-06-25 08:58:15 --> Config Class Initialized
+DEBUG - 2013-06-25 08:58:15 --> Hooks Class Initialized
+DEBUG - 2013-06-25 08:58:15 --> Utf8 Class Initialized
+DEBUG - 2013-06-25 08:58:15 --> UTF-8 Support Disabled
+DEBUG - 2013-06-25 08:58:15 --> URI Class Initialized
+DEBUG - 2013-06-25 08:58:15 --> Router Class Initialized
+DEBUG - 2013-06-25 08:58:15 --> Output Class Initialized
+DEBUG - 2013-06-25 08:58:15 --> Security Class Initialized
+DEBUG - 2013-06-25 08:58:15 --> Input Class Initialized
+DEBUG - 2013-06-25 08:58:15 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-06-25 08:58:15 --> Language Class Initialized
+DEBUG - 2013-06-25 08:58:15 --> Loader Class Initialized
+DEBUG - 2013-06-25 08:58:15 --> Helper loaded: url_helper
+DEBUG - 2013-06-25 08:58:15 --> Helper loaded: html_helper
+DEBUG - 2013-06-25 08:58:15 --> Helper loaded: form_helper
+DEBUG - 2013-06-25 08:58:15 --> Database Driver Class Initialized
+DEBUG - 2013-06-25 08:58:15 --> Controller Class Initialized
+DEBUG - 2013-06-25 08:58:15 --> Model Class Initialized
+DEBUG - 2013-06-25 08:58:15 --> Model Class Initialized
+DEBUG - 2013-06-25 08:58:15 --> Model Class Initialized
+DEBUG - 2013-06-25 08:58:15 --> Model Class Initialized
+DEBUG - 2013-06-25 09:01:49 --> Config Class Initialized
+DEBUG - 2013-06-25 09:01:49 --> Hooks Class Initialized
+DEBUG - 2013-06-25 09:01:49 --> Utf8 Class Initialized
+DEBUG - 2013-06-25 09:01:49 --> UTF-8 Support Disabled
+DEBUG - 2013-06-25 09:01:49 --> URI Class Initialized
+DEBUG - 2013-06-25 09:01:49 --> Router Class Initialized
+DEBUG - 2013-06-25 09:01:49 --> Output Class Initialized
+DEBUG - 2013-06-25 09:01:49 --> Security Class Initialized
+DEBUG - 2013-06-25 09:01:49 --> Input Class Initialized
+DEBUG - 2013-06-25 09:01:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-06-25 09:01:49 --> Language Class Initialized
+DEBUG - 2013-06-25 09:01:49 --> Loader Class Initialized
+DEBUG - 2013-06-25 09:01:49 --> Helper loaded: url_helper
+DEBUG - 2013-06-25 09:01:49 --> Helper loaded: html_helper
+DEBUG - 2013-06-25 09:01:49 --> Helper loaded: form_helper
+DEBUG - 2013-06-25 09:01:49 --> Database Driver Class Initialized
+DEBUG - 2013-06-25 09:01:49 --> Controller Class Initialized
+DEBUG - 2013-06-25 09:01:49 --> Model Class Initialized
+DEBUG - 2013-06-25 09:01:49 --> Model Class Initialized
+DEBUG - 2013-06-25 09:01:49 --> Model Class Initialized
+DEBUG - 2013-06-25 09:01:49 --> Model Class Initialized
+DEBUG - 2013-06-25 09:01:50 --> File loaded: application/views/comprobante_pago.php
+ERROR - 2013-06-25 09:01:50 --> Severity: Warning  --> Missing argument 2 for Html2pdf::Html2pdf(), called in /var/www/consulta/system/core/Loader.php on line 1099 and defined /var/www/consulta/application/libraries/html2pdf.php 37
+ERROR - 2013-06-25 09:01:50 --> Severity: Notice  --> Undefined variable: filename /var/www/consulta/application/libraries/html2pdf.php 41
+DEBUG - 2013-06-25 09:02:12 --> Config Class Initialized
+DEBUG - 2013-06-25 09:02:12 --> Hooks Class Initialized
+DEBUG - 2013-06-25 09:02:12 --> Utf8 Class Initialized
+DEBUG - 2013-06-25 09:02:12 --> UTF-8 Support Disabled
+DEBUG - 2013-06-25 09:02:12 --> URI Class Initialized
+DEBUG - 2013-06-25 09:02:12 --> Router Class Initialized
+DEBUG - 2013-06-25 09:02:12 --> Output Class Initialized
+DEBUG - 2013-06-25 09:02:12 --> Security Class Initialized
+DEBUG - 2013-06-25 09:02:12 --> Input Class Initialized
+DEBUG - 2013-06-25 09:02:12 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-06-25 09:02:12 --> Language Class Initialized
+DEBUG - 2013-06-25 09:02:12 --> Loader Class Initialized
+DEBUG - 2013-06-25 09:02:12 --> Helper loaded: url_helper
+DEBUG - 2013-06-25 09:02:12 --> Helper loaded: html_helper
+DEBUG - 2013-06-25 09:02:12 --> Helper loaded: form_helper
+DEBUG - 2013-06-25 09:02:12 --> Database Driver Class Initialized
+DEBUG - 2013-06-25 09:02:12 --> Controller Class Initialized
+DEBUG - 2013-06-25 09:02:12 --> Model Class Initialized
+DEBUG - 2013-06-25 09:02:12 --> Model Class Initialized
+DEBUG - 2013-06-25 09:02:12 --> Model Class Initialized
+DEBUG - 2013-06-25 09:02:12 --> Model Class Initialized
+DEBUG - 2013-06-25 09:02:13 --> File loaded: application/views/comprobante_pago.php
+DEBUG - 2013-06-25 09:03:36 --> Config Class Initialized
+DEBUG - 2013-06-25 09:03:36 --> Hooks Class Initialized
+DEBUG - 2013-06-25 09:03:36 --> Utf8 Class Initialized
+DEBUG - 2013-06-25 09:03:36 --> UTF-8 Support Disabled
+DEBUG - 2013-06-25 09:03:36 --> URI Class Initialized
+DEBUG - 2013-06-25 09:03:36 --> Router Class Initialized
+DEBUG - 2013-06-25 09:03:36 --> Output Class Initialized
+DEBUG - 2013-06-25 09:03:36 --> Security Class Initialized
+DEBUG - 2013-06-25 09:03:36 --> Input Class Initialized
+DEBUG - 2013-06-25 09:03:36 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-06-25 09:03:36 --> Language Class Initialized
+DEBUG - 2013-06-25 09:03:36 --> Loader Class Initialized
+DEBUG - 2013-06-25 09:03:36 --> Helper loaded: url_helper
+DEBUG - 2013-06-25 09:03:36 --> Helper loaded: html_helper
+DEBUG - 2013-06-25 09:03:36 --> Helper loaded: form_helper
+DEBUG - 2013-06-25 09:03:36 --> Database Driver Class Initialized
+DEBUG - 2013-06-25 09:03:36 --> Controller Class Initialized
+DEBUG - 2013-06-25 09:03:36 --> Model Class Initialized
+DEBUG - 2013-06-25 09:03:36 --> Model Class Initialized
+DEBUG - 2013-06-25 09:03:36 --> Model Class Initialized
+DEBUG - 2013-06-25 09:03:36 --> Model Class Initialized
+DEBUG - 2013-06-25 09:03:37 --> File loaded: application/views/comprobante_pago.php
+DEBUG - 2013-06-25 09:04:15 --> Config Class Initialized
+DEBUG - 2013-06-25 09:04:15 --> Hooks Class Initialized
+DEBUG - 2013-06-25 09:04:15 --> Utf8 Class Initialized
+DEBUG - 2013-06-25 09:04:15 --> UTF-8 Support Disabled
+DEBUG - 2013-06-25 09:04:15 --> URI Class Initialized
+DEBUG - 2013-06-25 09:04:15 --> Router Class Initialized
+DEBUG - 2013-06-25 09:04:15 --> Output Class Initialized
+DEBUG - 2013-06-25 09:04:15 --> Security Class Initialized
+DEBUG - 2013-06-25 09:04:15 --> Input Class Initialized
+DEBUG - 2013-06-25 09:04:15 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-06-25 09:04:15 --> Language Class Initialized
+DEBUG - 2013-06-25 09:04:15 --> Loader Class Initialized
+DEBUG - 2013-06-25 09:04:15 --> Helper loaded: url_helper
+DEBUG - 2013-06-25 09:04:15 --> Helper loaded: html_helper
+DEBUG - 2013-06-25 09:04:15 --> Helper loaded: form_helper
+DEBUG - 2013-06-25 09:04:15 --> Database Driver Class Initialized
+DEBUG - 2013-06-25 09:04:15 --> Controller Class Initialized
+DEBUG - 2013-06-25 09:04:15 --> Model Class Initialized
+DEBUG - 2013-06-25 09:04:15 --> Model Class Initialized
+DEBUG - 2013-06-25 09:04:15 --> Model Class Initialized
+DEBUG - 2013-06-25 09:04:15 --> Model Class Initialized
+DEBUG - 2013-06-25 09:04:16 --> File loaded: application/views/comprobante_pago.php
+DEBUG - 2013-06-25 09:04:53 --> Config Class Initialized
+DEBUG - 2013-06-25 09:04:53 --> Hooks Class Initialized
+DEBUG - 2013-06-25 09:04:53 --> Utf8 Class Initialized
+DEBUG - 2013-06-25 09:04:53 --> UTF-8 Support Disabled
+DEBUG - 2013-06-25 09:04:53 --> URI Class Initialized
+DEBUG - 2013-06-25 09:04:53 --> Router Class Initialized
+DEBUG - 2013-06-25 09:04:53 --> Output Class Initialized
+DEBUG - 2013-06-25 09:04:53 --> Security Class Initialized
+DEBUG - 2013-06-25 09:04:53 --> Input Class Initialized
+DEBUG - 2013-06-25 09:04:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-06-25 09:04:53 --> Language Class Initialized
+DEBUG - 2013-06-25 09:04:53 --> Loader Class Initialized
+DEBUG - 2013-06-25 09:04:53 --> Helper loaded: url_helper
+DEBUG - 2013-06-25 09:04:53 --> Helper loaded: html_helper
+DEBUG - 2013-06-25 09:04:53 --> Helper loaded: form_helper
+DEBUG - 2013-06-25 09:04:53 --> Database Driver Class Initialized
+DEBUG - 2013-06-25 09:04:53 --> Controller Class Initialized
+DEBUG - 2013-06-25 09:04:53 --> Model Class Initialized
+DEBUG - 2013-06-25 09:04:53 --> Model Class Initialized
+DEBUG - 2013-06-25 09:04:53 --> Model Class Initialized
+DEBUG - 2013-06-25 09:04:53 --> Model Class Initialized
+DEBUG - 2013-06-25 09:04:54 --> File loaded: application/views/comprobante_pago.php
+ERROR - 2013-06-25 09:04:54 --> Severity: Notice  --> Undefined property: Html2pdf::$articleurl /var/www/consulta/application/libraries/html2pdf.php 90
+ERROR - 2013-06-25 09:04:54 --> Severity: Warning  --> include(font/times.php): failed to open stream: No such file or directory /var/www/consulta/application/libraries/fpdf.php 655
+ERROR - 2013-06-25 09:04:54 --> Severity: Warning  --> include(): Failed opening 'font/times.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') /var/www/consulta/application/libraries/fpdf.php 655
+DEBUG - 2013-06-25 09:05:50 --> Config Class Initialized
+DEBUG - 2013-06-25 09:05:50 --> Hooks Class Initialized
+DEBUG - 2013-06-25 09:05:50 --> Utf8 Class Initialized
+DEBUG - 2013-06-25 09:05:50 --> UTF-8 Support Disabled
+DEBUG - 2013-06-25 09:05:50 --> URI Class Initialized
+DEBUG - 2013-06-25 09:05:50 --> Router Class Initialized
+DEBUG - 2013-06-25 09:05:50 --> Output Class Initialized
+DEBUG - 2013-06-25 09:05:50 --> Security Class Initialized
+DEBUG - 2013-06-25 09:05:50 --> Input Class Initialized
+DEBUG - 2013-06-25 09:05:50 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-06-25 09:05:50 --> Language Class Initialized
+DEBUG - 2013-06-25 09:05:50 --> Loader Class Initialized
+DEBUG - 2013-06-25 09:05:50 --> Helper loaded: url_helper
+DEBUG - 2013-06-25 09:05:50 --> Helper loaded: html_helper
+DEBUG - 2013-06-25 09:05:50 --> Helper loaded: form_helper
+DEBUG - 2013-06-25 09:05:50 --> Database Driver Class Initialized
+DEBUG - 2013-06-25 09:05:50 --> Controller Class Initialized
+DEBUG - 2013-06-25 09:05:50 --> Model Class Initialized
+DEBUG - 2013-06-25 09:05:50 --> Model Class Initialized
+DEBUG - 2013-06-25 09:05:50 --> Model Class Initialized
+DEBUG - 2013-06-25 09:05:50 --> Model Class Initialized
+DEBUG - 2013-06-25 09:05:51 --> File loaded: application/views/comprobante_pago.php
+ERROR - 2013-06-25 09:05:51 --> Severity: Warning  --> include(font/times.php): failed to open stream: No such file or directory /var/www/consulta/application/libraries/fpdf.php 655
+ERROR - 2013-06-25 09:05:51 --> Severity: Warning  --> include(): Failed opening 'font/times.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') /var/www/consulta/application/libraries/fpdf.php 655
+DEBUG - 2013-06-25 09:07:26 --> Config Class Initialized
+DEBUG - 2013-06-25 09:07:26 --> Hooks Class Initialized
+DEBUG - 2013-06-25 09:07:26 --> Utf8 Class Initialized
+DEBUG - 2013-06-25 09:07:26 --> UTF-8 Support Disabled
+DEBUG - 2013-06-25 09:07:26 --> URI Class Initialized
+DEBUG - 2013-06-25 09:07:26 --> Router Class Initialized
+DEBUG - 2013-06-25 09:07:26 --> Output Class Initialized
+DEBUG - 2013-06-25 09:07:26 --> Security Class Initialized
+DEBUG - 2013-06-25 09:07:26 --> Input Class Initialized
+DEBUG - 2013-06-25 09:07:26 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-06-25 09:07:26 --> Language Class Initialized
+DEBUG - 2013-06-25 09:07:26 --> Loader Class Initialized
+DEBUG - 2013-06-25 09:07:26 --> Helper loaded: url_helper
+DEBUG - 2013-06-25 09:07:26 --> Helper loaded: html_helper
+DEBUG - 2013-06-25 09:07:26 --> Helper loaded: form_helper
+DEBUG - 2013-06-25 09:07:26 --> Database Driver Class Initialized
+DEBUG - 2013-06-25 09:07:26 --> Controller Class Initialized
+DEBUG - 2013-06-25 09:07:26 --> Model Class Initialized
+DEBUG - 2013-06-25 09:07:26 --> Model Class Initialized
+DEBUG - 2013-06-25 09:07:26 --> Model Class Initialized
+DEBUG - 2013-06-25 09:07:26 --> Model Class Initialized
+DEBUG - 2013-06-25 09:07:28 --> File loaded: application/views/comprobante_pago.php
+ERROR - 2013-06-25 09:07:28 --> Severity: Notice  --> A non well formed numeric value encountered /var/www/consulta/application/libraries/html2pdf.php 106
+ERROR - 2013-06-25 09:07:28 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated /var/www/consulta/application/libraries/fpdf.php 1270
+ERROR - 2013-06-25 09:07:28 --> Severity: 8192  --> Function set_magic_quotes_runtime() is deprecated /var/www/consulta/application/libraries/fpdf.php 1308

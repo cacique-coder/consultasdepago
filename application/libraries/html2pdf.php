@@ -34,11 +34,12 @@ function txtentities($html){
 /************************************/
 class Html2pdf {
 
-	function Html2pdf($_html = "") {
+	function Html2pdf($_html = "",$filename="") {
 		// main vars
 		$this->html=$_html;               // html text to _convert to PDF
 		$this->title="Comprobante de pago";             // article title
-	//	$this->articleurl=$_articleurl;   // article URL
+		$this->filename = $filename;
+		$this->articleurl = '';
 		$this->author = "Daniel Zambrano";           // article author
 		$this->date= date('d/m/Y');               // date being published
 		// other options
@@ -110,10 +111,11 @@ class Html2pdf {
 		$pdf->WriteHTML($this->_convert(stripslashes($this->html)),$this->bi);
 
 		// save and redirect
-		$filename=$this->directory.$this->_makeFileName($this->title).'.pdf';
+		$filename=$this->directory.$this->_makeFileName($this->filename).'.pdf';
 		$http=$this->http.$this->_makeFileName($this->title).'.pdf';
-		$pdf->Output($filename);
-		header("Location: $http");
+		print_r($pdf->Output());
+//		$pdf->Output($filename);
+/*		header("Location: $http");
 
 		// cleanup
 		$files=opendir($this->directory);
@@ -126,7 +128,7 @@ class Html2pdf {
 			}
 		}
 		// stop processing
-		exit;
+		exit;*/
 	}
 } 
 
