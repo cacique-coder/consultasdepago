@@ -3,7 +3,6 @@
 /* Radek HULAN             */
 /* http://hulan.info/blog/ */
 /***************************/ 
-
 define('FPDF_FONTPATH','font/');
 require('fpdf.php');
 
@@ -103,7 +102,7 @@ class Html2pdf {
 		$pdf->PutMinorTitle($this->articleurl,$this->articleurl);
 		$pdf->PutMinorHeading('Author');
 		$pdf->PutMinorTitle($this->_convert($this->author));
-		$pdf->PutMinorHeading("Published: ".date("F j, Y, g:i a",$this->date));
+		$pdf->PutMinorHeading("Published: ".$this->date);
 		$pdf->PutLine();
 		$pdf->Ln(10);
 
