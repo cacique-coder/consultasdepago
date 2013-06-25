@@ -34,7 +34,6 @@ $config['charset'] = 'LATIN9';
 $config['enable_hooks'] = FALSE;
 
 $config['subclass_prefix'] = 'MY_';
-
 $config['permitted_uri_chars'] = 'a-z 0-9~%.:_\-';
 
 

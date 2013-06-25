@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="latin9">
-	<title> </title>
-</head>
+<?php include('head_html.php');?>
 <body>
-
 <div id="container">
 	<div id="body">
 
 	</div>
 </div>
-
 </body>
 </html>

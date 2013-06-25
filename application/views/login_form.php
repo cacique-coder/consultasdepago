@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="latin9">
-  <title> </title>
-  <?php echo link_tag('css/estilos.css'); ?>
-</head>
-<body>
-
+<?php include('head_html.php');?>
 <div id="container">
   <div id="header">
     <h1> Sistema de consulta de recibo de pago</h1>

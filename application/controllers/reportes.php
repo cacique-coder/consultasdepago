@@ -12,12 +12,15 @@ class Reportes extends CI_Controller {
 	public function index(){
 		$this->load->view('reporte_formulario',array('user' => $this->current_user));
 	}
-	public function reporte(){
-		$this->load->view('index',array('user' => $this->current_user));
-	}
-	public function formulario(){
+	public function comprobante(){
 		$reporte = new Reporte_model($this->current_user);
-		print_r($reporte->generarComprobante());
+		$data = array(
+			'comprobante' => $reporte->generarComprobante()
+		);
+		
+		$this->load->library('Html2pdf');
+		$pdf = new Html_to_pdf($this->load->view("comprobante_pago",$data,true));
+		$pdf->output();
 	}
 
 	private function set_current_user(){
