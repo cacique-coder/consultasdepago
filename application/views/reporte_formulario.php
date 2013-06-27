@@ -6,6 +6,9 @@
   </div>
 
   <div id="body">
+    <?php if (isset($error)): ?>
+      <p>No hay nominas cargadas para el periodo establecido</p>
+    <?php endif ?>
     <?php echo form_open('reportes/comprobante',array('class' => 'big_label','method' =>'get')); ?>
       <label> Indique la quincena deseada:
         <select name='filter[quincena]'>

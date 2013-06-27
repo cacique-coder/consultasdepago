@@ -15,8 +15,9 @@ class Reporte_model extends CI_Model {
 			$params = $this -> params_comprobante(1);
 			$result = $this->query_with_filter('reporte',$params);
 
-		}		
-		if (count($result > 0))
+		}
+
+		if (count($result) > 0)
 			return $this->formatear_comprobante_pago($result);
 		else
 			return false;

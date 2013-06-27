@@ -14,15 +14,18 @@ class Reportes extends CI_Controller {
 	}
 	public function comprobante(){
 		$reporte = new Reporte_model($this->current_user,$this->input->get('filter'));
-		$data = array(
-			'comprobante' => $reporte->generarComprobante()
-		);
-		$html = $this->load->view("comprobante_pago",$data,true);
-//		$html = $this->load->view("comprobante_pago",$data,false);
-		$this->load->library('mpdf');
-		$pdf = new mPDF();
-		$pdf->WriteHtml($html);
-		$pdf->Output();
+		$comprobante =  $reporte->generarComprobante();
+		if ($comprobante) {
+			$data = array('comprobante' => $comprobante);
+			$html = $this->load->view("comprobante_pago",$data,true);
+			$this->load->library('mpdf');
+			$pdf = new mPDF();
+			$pdf->WriteHtml($html);
+			$pdf->Output();
+		}
+		else{	
+			$this->load->view('reporte_formulario',array('user' => $this->current_user,'error' => 1));
+		}
 	}
 
 	private function set_current_user(){
