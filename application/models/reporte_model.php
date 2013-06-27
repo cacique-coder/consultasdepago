@@ -7,9 +7,16 @@ class Reporte_model extends CI_Model {
 		$this->filter=$filter;
 	}
 	public function generarComprobante(){
-		$params = $this -> params_comprobante();
-		$result = $this->query_with_filter('reporte',$params);
-		if (count($result > 0)) 
+		if( $this -> son_ambas_quincenas() ){
+			$params = $this -> params_comprobante(2);
+			$result = $this->query_with_filter('reporte',$params);
+		}
+		else{
+			$params = $this -> params_comprobante(1);
+			$result = $this->query_with_filter('reporte',$params);
+
+		}		
+		if (count($result > 0))
 			return $this->formatear_comprobante_pago($result);
 		else
 			return false;
@@ -24,7 +31,7 @@ class Reporte_model extends CI_Model {
 			'fechas' => $this->rango_fechas($data),
 			'empresa' => $this->nombre_empresa($data),
 			'empleado' => $this->datos_empleado($data),
-			'conceptos' => $this->datos_conceptos($data)
+			'detalles' => $this->datos_conceptos($data)
 			);
 	}
 
@@ -44,12 +51,20 @@ class Reporte_model extends CI_Model {
 			'funcion' => $data[0]['desorg']);
 	}
 	private function datos_conceptos($data){
-		$conceptos = array('asignaciones' => array(), 'deducciones' => array());
+		$index = $data[0]['desde'];
+		$conceptos = array($index => array('asignaciones' => array(), 'deducciones' => array(), 'fecha' => ''));					
+		$conceptos[$index]['fecha']= $data[0]['desde'].' a '.$data[0]['hasta'];
 		foreach ($data as $concepto) {
+			if($concepto['desde'] != $index) {
+				$index = $concepto['desde'] ;
+				$conceptos[$index] = array('asignaciones' => array(), 'deducciones' => array(), 'fecha' => '');
+				$conceptos[$index]['fecha']= $concepto['desde'].' a '.$concepto['hasta'];
+			}
 			$key = ($concepto['sigcon'] == 'A') ? 'asignaciones' : 'deducciones';
-			$conceptos[$key][] = array(
+			$conceptos[$index][$key][] = array(
 				'nombre' => $concepto['nomcon'],
-				'monto' => $concepto['acuemp'] );
+				'monto' => $concepto['acuemp']
+				);
 		}
 		return $conceptos;
 	}
@@ -65,11 +80,12 @@ class Reporte_model extends CI_Model {
 
 	private function add_filter($nombre_query){
 		$where = 'WHERE codper = ? and EXTRACT(month from desde) = ? ';
+		$order = ' ORDER BY desde';
 		if( !$this -> son_ambas_quincenas() ){
 			$where = $where.' and '.$this->condicion_de_quincena();
 		}
-	//	return $this->sql[$nombre_query].' '.$where.' ORDER BY nomcon';
-		return $this->sql[$nombre_query].' '.$where;
+
+		return $this->sql[$nombre_query].' '.$where.$order;
 	}
 
 	private function son_ambas_quincenas() {
@@ -80,7 +96,8 @@ class Reporte_model extends CI_Model {
 		return $this->filter['quincena'] == 1 ? 'EXTRACT(day from desde) = 1' : 'EXTRACT(day from desde) = 16';
 	}
 
-	private function params_comprobante(){
+	private function params_comprobante($cantidad_quincenas){
+		$this->quincenas = $cantidad_quincenas;
 		$cedula = $this -> format_cedula();
 		$mes = (int)$this ->filter['mes'];
 		return array($cedula,$mes);

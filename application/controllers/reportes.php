@@ -18,9 +18,11 @@ class Reportes extends CI_Controller {
 			'comprobante' => $reporte->generarComprobante()
 		);
 		$html = $this->load->view("comprobante_pago",$data,true);
-		$this->load->library('Html2pdf');
-		$pdf = new Html2pdf($html,$this->current_user->cedula);
-		$pdf->run();
+//		$html = $this->load->view("comprobante_pago",$data,false);
+		$this->load->library('mpdf');
+		$pdf = new mPDF();
+		$pdf->WriteHtml($html);
+		$pdf->Output();
 	}
 
 	private function set_current_user(){
