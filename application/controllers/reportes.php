@@ -13,7 +13,7 @@ class Reportes extends CI_Controller {
 		$this->load->view('reporte_formulario',array('user' => $this->current_user));
 	}
 	public function comprobante(){
-		$reporte = new Reporte_model($this->current_user);
+		$reporte = new Reporte_model($this->current_user,$this->input->get('filter'));
 		$data = array(
 			'comprobante' => $reporte->generarComprobante()
 		);

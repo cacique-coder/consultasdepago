@@ -21,18 +21,20 @@ class Auth_model extends CI_Model {
     $this->set_auth_user();
     return true;
   }
+
   public function log_ldap(){
     $this -> connect_ldap();
     $this -> user_data();
     $this -> ldap_bind();
-  if ($this->ldapbind) {
+    if ($this->ldapbind) {
       $this->search_data();
       $this->set_auth_user();
       return true;
-  } else {
-    return false;
+    } else {
+      return false;
+    }
   }
-  }
+
   public function get_user_auth(){
     $this->user;
   }
@@ -53,12 +55,13 @@ class Auth_model extends CI_Model {
     $this->ldap_conn = ldap_connect($this->config['host']) or die("Could not connect to LDAP server.");
   }
   private function user_data(){
-    $this->ldap_rdn  = $this->user->login;     // ldap rdn or dn
+    $this->ldap_rdn = $this->user->login;     // ldap rdn or dn
     $this->ldap_pass = $this->user->password;  // associated password    
   }
   private function ldap_bind(){
-  $this->ldapbind = ldap_bind($this->ldap_conn, $this->ldap_rdn, $this->ldap_pass);
+    $this->ldapbind = ldap_bind($this->ldap_conn, $this->ldap_rdn, $this->ldap_pass);
   }
+
   private function set_auth_user(){
     $this->user->set_auth();
   }

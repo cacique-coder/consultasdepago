@@ -90,20 +90,12 @@ class Html2pdf {
 		$pdf=new PDF('P','mm','A4',$this->title,$this->articleurl,false);
 		$pdf->Open();
 		$pdf->SetCompression(true);
-		$pdf->SetCreator("Script by Radek HULAN, http://hulan.info/blog/");
+		$pdf->SetCreator("Scriwpt by Radek HULAN, http://hulan.info/blog/");
 		$pdf->SetDisplayMode('real');
 		$pdf->SetTitle($this->_convert($this->title));
 		$pdf->SetAuthor($this->author);
 		$pdf->AddPage();
 
-		// face
-		$pdf->PutMainTitle($this->_convert($this->title));
-		$pdf->PutMinorHeading('Article URL');
-		$pdf->PutMinorTitle($this->articleurl,$this->articleurl);
-		$pdf->PutMinorHeading('Author');
-		$pdf->PutMinorTitle($this->_convert($this->author));
-		$pdf->PutMinorHeading("Published: ".$this->date);
-		$pdf->PutLine();
 		$pdf->Ln(10);
 
 		// html
@@ -115,7 +107,6 @@ class Html2pdf {
 		print_r($pdf->Output());
 //		$pdf->Output($filename);
 /*		header("Location: $http");
-
 		// cleanup
 		$files=opendir($this->directory);
 		while ( false !== ($filename = readdir($files))) {

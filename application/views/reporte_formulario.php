@@ -8,7 +8,7 @@
   <div id="body">
     <?php echo form_open('reportes/comprobante',array('class' => 'big_label','method' =>'get')); ?>
       <label> Indique la quincena deseada:
-        <select name='quincena'>
+        <select name='filter[quincena]'>
           <option value='1'> Primera</option>
           <option value='2'> Segunda</option>
           <option value='3'> Ambas</option>
@@ -18,7 +18,7 @@
         Indique el mes:
         <?php $meses = explode(' ',"Enero Febrero Marzo Abril Mayo Junio Julio Agosto Septiembre Octubre Noviembre Diciembre");?>
         <?php $mes_actual = date('n') - 1; ?>
-        <select> 
+        <select name='filter[mes]'> 
           <?php foreach($meses as $mes => $nombre) :?>
             <?php if( $mes_actual < $mes):?>
               <?php break;?>

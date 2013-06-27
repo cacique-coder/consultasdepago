@@ -7,7 +7,7 @@ class User_model extends CI_Model {
 
 	function __construct($foo = null) {
 		parent::__construct();
-		$this->cedula ='0014887191';
+		$this->cedula ='0017926658';
 		$this->nombre = 'nombre aqui';
 		$this-> auth = false;
 	}

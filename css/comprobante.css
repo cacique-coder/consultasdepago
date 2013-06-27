@@ -1,0 +1,15 @@
+table{
+	width: 200px;
+	border:1px solid #aaa;
+}
+.datos_empleado > div{
+	margin: 10px;
+	border: 1px solid #ccc;
+}
+td,th{
+	width: 200px;
+	margin: 0;
+	padding: 5px 0;
+	border: 1px solid #aaa;
+	border-collapse: collapse;
+}
