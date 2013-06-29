@@ -32,7 +32,7 @@
           <?php endforeach;?>
         </select>
       </label>
-      <input type="submit" value='Entrar'>
+      <input type="submit" value='Generar Recibo'>
     </form>
   </div>
 </div>
