@@ -7,15 +7,9 @@ class Reporte_model extends CI_Model {
 		$this->filter=$filter;
 	}
 	public function generarComprobante(){
-		if( $this -> son_ambas_quincenas() ){
-			$params = $this -> params_comprobante(2);
-			$result = $this->query_with_filter('reporte',$params);
-		}
-		else{
-			$params = $this -> params_comprobante(1);
-			$result = $this->query_with_filter('reporte',$params);
-
-		}
+		$num_quincenas = ($this -> son_ambas_quincenas()) ? 2 : 1;
+		$params = $this -> params_comprobante($num_quincenas);
+		$result = $this->query_with_filter('reporte',$params);
 
 		if (count($result) > 0)
 			return $this->formatear_comprobante_pago($result);
